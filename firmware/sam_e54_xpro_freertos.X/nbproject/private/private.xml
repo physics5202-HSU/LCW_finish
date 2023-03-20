@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/config/sam_e54_xpro_freertos/tasks.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/com_lib.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/uart_command.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/config/sam_e54_xpro_freertos/system/time/src/sys_time.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/config/sam_e54_xpro_freertos/peripheral/sercom/usart/plib_sercom5_usart.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/config/sam_e54_xpro_freertos/driver/miim/src/dynamic/drv_miim.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/uart_app.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/uart_app.h</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/Judgeman.h</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/main.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/BH1750FVI.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/judgeman_app.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/OLED12864.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/lcw.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/adc.h</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/uart_command.h</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/com_lib.h</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/Judgeman.c</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/lcw.h</file>
+            <file>file:/C:/LCW_finish/new_lcw/new_lcw/firmware/src/adc.c</file>
+        </group>
+    </open-files>
+</project-private>

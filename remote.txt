@@ -1,0 +1,4 @@
+git@192.168.0.70:lcw_micron_e54
+git@github.com:raulyei/lcw_e54.git
+
+check remote first
