@@ -339,7 +339,7 @@ void threadGPIO(void)
             {//1-->0
              //SYS_CONSOLE_PRINT("1-->0\r\n");
              GPIO_ButtonStatus=False;
-             type_judge = Judge_NO;
+             //type_judge = Judge_NO;
              //data_judge = GPIO_ButtonStatus;
             }
         }                    
@@ -348,6 +348,7 @@ void threadGPIO(void)
 
 void threadADC(void)
 {
+#if 1
     preADC_data = 0;
     //bool data_judge = False;
     ADC0_Enable();
@@ -363,8 +364,28 @@ void threadADC(void)
          type_judge = Judge_ADC;
       }
     }else{
-    type_judge = Judge_NO;
+    //type_judge = Judge_NO;
     } 
+#else
+    //preADC_data = 0;
+    //bool data_judge = False;
+    ADC0_Enable();
+    ADC0_ConversionStart();
+    //ADC0_EventHandler(&adc0_data);
+    if(ADC0_ConversionStatusGet())
+    {
+      uint16_t v_adc=ADC0_ConversionResultGet();
+      newADC_data = v_adc;
+      //if((newADC_data - preADC_data) < 3000)
+      if((preADC_data - newADC_data) > 0x7FF)
+      {
+         type_judge = Judge_ADC;
+      }
+    }else{
+        preADC_data = newADC_data;
+        type_judge = Judge_NO;
+    }    
+#endif    
 }
 
 void threadUART(void)
@@ -372,47 +393,50 @@ void threadUART(void)
     if (SERCOM0_USART_ReadCountGet() > 0) 
     {
         type_judge = Judge_UART;
+    }else{
+        //type_judge = Judge_NO;
     }
 }
 void threadJudgeman(void)
 {
-  threadALS();
+  //threadALS();
   threadGPIO();
   threadADC();
+  threadUART();
   
   switch(type_judge)
   {
       case Judge_ALS:
-            flagALS = True;
-            flagADC = false;
-            flagGPIO = false;
-            flagHMI = false;
-            Als_Crlon = 1;
+            //flagALS = True;
+            //flagADC = false;
+            //flagGPIO = false;
+            //flagHMI = false;
+            //Als_Crlon = 1;
           break;
       case Judge_ADC:
-            flagALS = false;
+            //flagALS = false;
             flagADC = True;
             flagGPIO = false;
-            flagHMI = false;         
+            //flagHMI = false;         
           break;
       case Judge_GPIO:
-            flagALS = false;
+            //flagALS = false;
             flagADC = false;
-            flagHMI = false;
+            //flagHMI = false;
             flagGPIO = True;              
           break;
       case Judge_HMI:
-            flagALS = false;
-            flagADC = false;
-            flagGPIO = false;
-            flagHMI = True;          
+            //flagALS = false;
+            //flagADC = false;
+            //flagGPIO = false;
+            //flagHMI = True;          
           break;
       case Judge_NO:
-            Als_Crlon = 0;
+            //Als_Crlon = 0;
           break;
       case Judge_UART:
-            Als_Crlon = 0;
-            flagALS = false;
+            //Als_Crlon = 0;
+            //flagALS = false;
             flagADC = false;
             flagGPIO = false;
           break;          
